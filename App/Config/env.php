@@ -3,8 +3,8 @@ define('DATABASE', [
 		'driver'   => 'mysql',
 		'host'     => 'localhost',
 		'dbname'   => 'banco',
-		'user'     => 'titaneo',
-		'password' => 'delta99',
+		'user'     => 'nombre_usuario',
+		'password' => 'contraseña',
 		'errmode'  => PDO::ATTR_ERRMODE,
 		'errexcep'  => PDO::ERRMODE_EXCEPTION
 	]);
