@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="row">
+      <div class="col-12">
+        <button type="button" id="btnAgregar" name="Añadir" class="btn btn-success">Agregar</button><br><br>
+      </div>
+    </div>
+    <div id="formularioregistros" class="card" >
+      <div class="card-header">
+        <h3>Agregar Clientes</h3>
+      </div>
+      <div class="card-body">
+        <form id="formulario" method="post" action="">
+          <div class="form-row d-flex justify-content-center">
+            <div class="col-md-5">
+              <label for="rut">RUT</label>
+              <input type="hidden" name="idcliente" id="idcliente" />
+              <input type="text" class="form-control" id="rut" name="rut" placeholder="RUT"  required>
+            </div>
+            <div class="col-md-5">
+              <label for="nombre">Nombre</label>
+              <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre y Apellidos" required>
+            </div>
+            <div class="col-md-7">
+              <label for="direccion">Dirección</label>
+              <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Dirección"  required>
+            </div>
+            <div class="col-md-3">
+              <label for="telefono">Teléfono</label>
+              <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Teléfono" required>
+            </div>
+            <div class="col-md-12 text-center">
+              <br>
+              <button type="submit" id="btnGuardar" class="btn btn-primary">Guardar</button>  <button id="cancelar" class="btn btn-danger">Cancelar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+      <div id="listadoregistros" class="card">
+        <div class="card-header">
+          <h3>Listado de Clientes</h3>
+        </div>
+        <div class="card-body">
+          <div class="col-12">
+             <table id="tbllistado" class="table table-striped table-bordered table-condensed table-hover">
+               <thead class="thead-dark">
+                 <tr>
+                   <th>Opciones</th>
+                   <th>Rut</th>
+                   <th>Nombre</th>
+                   <th>Dirección</th>
+                   <th>Teléfono</th>
+                 </tr>
+               <thead>
+               <tbody>
+               </tbody>
+               <tfoot>
+                 <tr>
+                   <td>Opciones</td>
+                   <td>Rut</td>
+                   <td>Nombre</td>
+                   <td>Dirección</td>
+                   <td>Teléfono</td>
+                 </tr>
+               <tfoot>
+              </table>
+          </div>
+        </div>
+      </div>
+
+{% endblock %}
