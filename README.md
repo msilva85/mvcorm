@@ -11,6 +11,12 @@ sudo apt-get install apache2
 #mariadb base de datos
 sudo apt-get install mariadb-server
 
+#Git
+sudo apt install git
+
+#composer
+sudo apt install composer
+
 #PHP 7
 sudo apt-get install -y php7.0 libapache2-mod-php7.0 php7.0-cli php7.0-common php7.0-mbstring php7.0-gd php7.0-intl php7.0-xml php7.0-mysql php7.0-mcrypt php7.0-zip
 
@@ -67,4 +73,24 @@ mysql -u nombre_usuario -p banco < banco.sql
 
 #actualizar usuario y contraseña del proyecto, en el proyecto editar usuario y contraseña de la ruta
 App/Config/env.php
+
+#como configurar directorios con rutas amigables o autoload en tus proyectos sin framework
+#con esto configuramos proyecto y json
+composer init
+
+#se edita el archiv composer
+"autoload" : {
+		"psr-4" : {
+			"App\\" : "App/"
+		}
+	}
+ 
+#se guarda y en consola
+composer dump-autoload
+
+#Ahora se puede usar namespace
+
+#como se instala el ORM ILLUMINATE en tu proyecto, en la carpeta de tu proyecto
+composer require illuminate/database
+#mas informacion en: https://packagist.org/packages/illuminate/database
 
